@@ -1,0 +1,80 @@
+{
+  "name": "PlayerControls",
+  "maps": [
+    {
+      "name": "Gameplay",
+      "id": "1a9f48c3-d947-45ec-9a07-ecb2cbe51f88",
+      "actions": [
+        {
+          "name": "Move",
+          "type": "Value",
+          "id": "6a8f0240-7ef9-4a8d-8d3d-233f486d60e2",
+          "expectedControlType": "Vector2"
+        },
+        {
+          "name": "Jump",
+          "type": "Button",
+          "id": "aa1f9f9d-f9c5-4c65-95f3-663c2ad65a2f",
+          "expectedControlType": "Button"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "WASD",
+          "id": "cb7e7f56-479a-4e9b-9d5f-9f1f7e6b61f1",
+          "path": "2DVector",
+          "action": "Move",
+          "isComposite": true
+        },
+        { "name": "up", "id": "db71cf3a-5f85-49c1-9010-5b95d239d5e1", "path": "<Keyboard>/w", "action": "Move", "isPartOfComposite": true },
+        { "name": "down", "id": "0c1555db-3b4a-4937-8c0b-6e76f0a2b802", "path": "<Keyboard>/s", "action": "Move", "isPartOfComposite": true },
+        { "name": "left", "id": "b27af7b0-59c8-44b6-bac8-8f223f47b917", "path": "<Keyboard>/a", "action": "Move", "isPartOfComposite": true },
+        { "name": "right", "id": "b1b1f97f-6b27-4cb0-9e76-62f5b6916d07", "path": "<Keyboard>/d", "action": "Move", "isPartOfComposite": true },
+
+        {
+          "name": "ArrowKeys",
+          "id": "11a0e97a-4513-4768-9f88-14f6f43107a3",
+          "path": "2DVector",
+          "action": "Move",
+          "isComposite": true
+        },
+        { "name": "up", "id": "ac7a3f0c-d0a0-4de3-a7b3-3ecb3bb01d7e", "path": "<Keyboard>/upArrow", "action": "Move", "isPartOfComposite": true },
+        { "name": "down", "id": "bd2c5df5-663f-46b1-9c22-9de02f64f259", "path": "<Keyboard>/downArrow", "action": "Move", "isPartOfComposite": true },
+        { "name": "left", "id": "312fa6b2-54a5-469d-8d5d-91e5e0a3a7b0", "path": "<Keyboard>/leftArrow", "action": "Move", "isPartOfComposite": true },
+        { "name": "right", "id": "4f82b0a2-d3f1-49db-9a19-bf08f29f22f0", "path": "<Keyboard>/rightArrow", "action": "Move", "isPartOfComposite": true },
+
+        { "name": "", "id": "845caac7-f947-4cf7-8c6d-819d00dfb1f2", "path": "<Gamepad>/leftStick", "action": "Move" },
+
+        { "name": "", "id": "6f32e1c8-d52e-4a62-9618-abc5f1d76d6a", "path": "OnScreenStick/Stick", "action": "Move" },
+
+        { "name": "", "id": "21a6809e-2a58-4c87-9ef4-f25276a7bb77", "path": "<Keyboard>/space", "action": "Jump" },
+        { "name": "", "id": "b8b26f87-fc54-43e8-9f39-771bb9e9f4fc", "path": "<Gamepad>/buttonSouth", "action": "Jump" },
+        { "name": "", "id": "b45f0a2d-1979-476c-8f7d-127fa0b46d32", "path": "OnScreenButton/Button", "action": "Jump" }
+      ]
+    }
+  ],
+  "controlSchemes": [
+    {
+      "name": "Keyboard&Mouse",
+      "bindingGroup": "Keyboard&Mouse",
+      "devices": [
+        { "devicePath": "<Keyboard>", "isOptional": false },
+        { "devicePath": "<Mouse>", "isOptional": true }
+      ]
+    },
+    {
+      "name": "Gamepad",
+      "bindingGroup": "Gamepad",
+      "devices": [
+        { "devicePath": "<Gamepad>", "isOptional": false }
+      ]
+    },
+    {
+      "name": "Touch",
+      "bindingGroup": "Touch",
+      "devices": [
+        { "devicePath": "<Touchscreen>", "isOptional": false }
+      ]
+    }
+  ]
+}
